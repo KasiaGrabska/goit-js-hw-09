@@ -26,6 +26,9 @@ flatpickr('#datetime-picker', {
     const selectedDate = selectedDates[0];
     if (selectedDate < new Date()) {
       window.alert('Please choose a date in the future');
+      buttonStart.disabled = true;
+    } else {
+      buttonStart.disabled = false;
     }
   },
 });
