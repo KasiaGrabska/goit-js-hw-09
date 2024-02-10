@@ -20,6 +20,7 @@ const clickButtonStart = () => {
     body.style.backgroundColor = getRandomHexColor();
   }, 1000);
   buttonStart.disabled = true;
+  buttonStop.disabled = false;
 };
 
 buttonStart.addEventListener('click', clickButtonStart);
@@ -28,6 +29,7 @@ const clickButtonStop = () => {
   if (intervalId) {
     clearInterval(intervalId);
     buttonStart.disabled = false;
+    buttonStop.disabled = true;
   }
 };
 
