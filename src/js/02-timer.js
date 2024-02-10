@@ -23,7 +23,7 @@ flatpickr('#datetime-picker', {
   defaultDate: new Date(),
   minuteIncrement: 1,
   onClose(selectedDates) {
-    const selectedDate = selectedDate[0];
+    const selectedDate = selectedDates[0];
     if (selectedDate < new Date()) {
       window.alert('Please choose a date in the future');
     }
