@@ -7,7 +7,6 @@
 //addLeadingZero(value), która używa metody padStart()
 
 import flatpickr from 'flatpickr';
-
 import 'flatpickr/dist/flatpickr.min.css';
 
 const timer = document.querySelector('.timer');
@@ -18,6 +17,7 @@ const dataMinutes = document.querySelector('.value[data-minutes]');
 const dataSeconds = document.querySelector('.value[data-seconds]');
 
 let selectedDate;
+let intervalId;
 
 flatpickr('#datetime-picker', {
   enableTime: true,
@@ -31,6 +31,7 @@ flatpickr('#datetime-picker', {
       buttonStart.disabled = true;
     } else {
       buttonStart.disabled = false;
+      startTimer();
     }
   },
 });
@@ -47,7 +48,7 @@ function convertMs(ms) {
   return { days, hours, minutes, seconds };
 }
 
-buttonStart.addEventListener('click', () => {
+function startTimer() {
   const today = new Date();
   const msDifference = selectedDate - today;
   const { days, hours, minutes, seconds } = convertMs(msDifference);
@@ -56,4 +57,20 @@ buttonStart.addEventListener('click', () => {
   dataHours.textContent = hours;
   dataMinutes.textContent = minutes;
   dataSeconds.textContent = seconds;
-});
+
+  intervalId = setInterval(() => {
+    const now = new Date();
+    const msDifference = selectedDate - now;
+    if (msDifference <= 0) {
+      clearInterval(intervalId); // Zatrzymaj odliczanie, gdy osiągnięto datę docelową
+      return;
+    }
+    const { days, hours, minutes, seconds } = convertMs(msDifference);
+    dataDays.textContent = days;
+    dataHours.textContent = hours;
+    dataMinutes.textContent = minutes;
+    dataSeconds.textContent = seconds;
+  }, 1000);
+}
+
+buttonStart.addEventListener('click', startTimer);
