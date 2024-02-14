@@ -49,15 +49,6 @@ function convertMs(ms) {
 }
 
 function startTimer() {
-  const today = new Date();
-  const msDifference = selectedDate - today;
-  const { days, hours, minutes, seconds } = convertMs(msDifference);
-
-  dataDays.textContent = days;
-  dataHours.textContent = hours;
-  dataMinutes.textContent = minutes;
-  dataSeconds.textContent = seconds;
-
   intervalId = setInterval(() => {
     const now = new Date();
     const msDifference = selectedDate - now;
