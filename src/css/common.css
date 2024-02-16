@@ -22,7 +22,7 @@
 }
 
 .datetime-picker:hover {
-  background-image: #aef359;
+  background-color: #aef359;
   cursor: pointer;
 }
 
@@ -37,11 +37,9 @@
   background-color: #99edc3;
   font-weight: 600;
 }
-.datetime-picker:hover {
-  background-image: #aef359;
-  cursor: pointer;
+.button-start:hover {
+  background-color: #dbead5;
 }
-
 .timer {
   display: flex;
   justify-content: center;
