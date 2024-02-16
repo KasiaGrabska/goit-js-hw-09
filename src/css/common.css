@@ -96,3 +96,46 @@
 .button-start {
   margin: 0 auto;
 }
+
+/* =============== PROMISE GENERATOR ============== */
+.form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.label-ms {
+  color: #59392b;
+  letter-spacing: 0.02em;
+  font-size: 15px;
+  font-weight: 600;
+}
+.input-ms {
+  background-color: #eed9c4;
+  border: 1px solid #af8266;
+}
+.create-promise-button {
+  margin-top: 20px;
+  padding: 15px 20px;
+  cursor: pointer;
+  width: 180px;
+  border-radius: 5px;
+  border: 1px solid #dfdfdf;
+  background: #fff;
+  transition: box-shadow 200ms, border 200ms ease-in-out;
+  color: #fff;
+  font-size: 15px;
+  border: #af8266;
+  letter-spacing: 0.02em;
+  background-color: #af8266;
+}
+
+.create-promise-button:hover {
+  background-color: bisque;
+  border: 1px solid #af8266;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
