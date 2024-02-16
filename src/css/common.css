@@ -2,14 +2,6 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: hotpink;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .container {
   max-width: 600px;
   margin: 20px auto;
@@ -39,33 +31,4 @@ body {
 .timer .label {
   font-size: 16px;
   color: #666;
-}
-
-button {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: mistyrose;
-  color: black;
-  border: 2px solid #c71585;
-  cursor: pointer;
-  margin-top: 10px;
-  border-radius: 20px;
-  width: 130px;
-  position: relative;
-  overflow: hidden;
-}
-
-button:disabled {
-  background-color: mistyrose;
-  cursor: not-allowed;
-}
-
-button:hover {
-  background-color: mistyrose;
-}
-
-/* Dodaj reguły CSS do wyśrodkowania przycisku Start i pola wyboru daty */
-input[type='text'] {
-  margin-bottom: 10px; /* Dodaj margin-bottom dla odstępu między polem wyboru daty a przyciskiem */
 }
