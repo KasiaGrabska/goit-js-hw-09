@@ -18,6 +18,7 @@
   transition: 0.5s;
   font-size: 20px;
   text-align: center;
+  background-color: #99edc3;
 }
 
 .datetime-picker:hover {
