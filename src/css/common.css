@@ -3,6 +3,15 @@
 }
 
 /* ================ TIMER ===================== */
+.background-image {
+  background-image: url('../images/background.jpg');
+  max-width: 1440px;
+  flex-shrink: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  margin: 0 auto;
+}
 
 .container-datetime-timer {
   display: flex;
