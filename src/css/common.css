@@ -2,13 +2,27 @@
   box-sizing: border-box;
 }
 
-.container {
-  max-width: 600px;
-  margin: 20px auto;
-  padding: 0 20px;
+/* ================ TIMER ===================== */
+
+.container-datetime-timer {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+
+.datetime-picker {
+  padding: 15px;
+  border: 2px solid #3ded97;
+  border-radius: 50px;
+  transition: 0.5s;
+  font-size: 20px;
+  text-align: center;
+}
+
+.datetime-picker:hover {
+  background-image: #aef359;
+  cursor: pointer;
 }
 
 .timer {
@@ -32,5 +46,9 @@
   font-size: 16px;
   color: #666;
 }
-button {
+.date-picker {
+  margin: 0 auto;
+}
+.button-start {
+  margin: 0 auto;
 }
