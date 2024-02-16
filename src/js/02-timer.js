@@ -31,9 +31,12 @@ flatpickr('#datetime-picker', {
       buttonStart.disabled = true;
     } else {
       buttonStart.disabled = false;
-      startTimer();
     }
   },
+});
+
+buttonStart.addEventListener('click', () => {
+  startTimer();
 });
 
 function convertMs(ms) {
@@ -49,11 +52,13 @@ function convertMs(ms) {
 }
 
 function startTimer() {
+  buttonStart.disabled = true; // Wyłącz przycisk "Start" po kliknięciu
   intervalId = setInterval(() => {
     const now = new Date();
     const msDifference = selectedDate - now;
     if (msDifference <= 0) {
       clearInterval(intervalId); // Zatrzymaj odliczanie, gdy osiągnięto datę docelową
+      buttonStart.disabled = false; // Włącz przycisk "Start" po zakończeniu odliczania
       return;
     }
     const { days, hours, minutes, seconds } = convertMs(msDifference);
